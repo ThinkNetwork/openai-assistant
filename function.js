@@ -72,7 +72,7 @@ window.function = async function(api_key, endpoint, body, json) {
 
     // IF THERE'S AN ERROR, RETURN THE ERROR MESSAGE
     if (!response.ok) {
-      let errorMessage = `Error ${response.status}`;
+      let errorMessage = `Error ${response.status} ${response.statusText}`;
       try {
         const errorData = await response.json();
         if (errorData.error && errorData.error.message) {
@@ -93,8 +93,8 @@ window.function = async function(api_key, endpoint, body, json) {
     }
 
     // SAFELY ACCESS ASSISTANT'S MESSAGE
-    if (data.choices && data.choices.length > 0 && data.choices[0].message && data.choices[0].message.content) {
-      const assistantMessage = data.choices[0].message.content.trim();
+    if (data.id && data.id.length > 0) {
+      const assistantMessage = data.id;
       // RETURN THE ASSISTANT MESSAGE
       return assistantMessage;
     } else {
