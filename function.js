@@ -62,7 +62,8 @@ window.function = async function(api_key, endpoint, body, json) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        'Authorization': `Bearer ${apiKey}`,
+        'OpenAI-Beta': 'assistants=v2'
       },
       body: bodyValue //JSON.stringify(payload)
     });
