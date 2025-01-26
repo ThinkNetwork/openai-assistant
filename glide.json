@@ -3,7 +3,7 @@
   {
     "kind": "column",
     "name": "OpenAI (Assistants)",
-    "description": "Create and modify OpenAI Assistants. If you want to level-up your Glide skills for free, head to https://loqode.com 🚀",
+    "description": "Create, modify and run OpenAI Assistants.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
