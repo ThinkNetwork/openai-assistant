@@ -56,7 +56,7 @@ window.function = async function(api_key, endpoint, body, json) {
     jsonMessage = `You must format your output as a JSON value. Your output will be parsed and type-checked according to the provided schema, so make sure all fields in your output match the schema exactly and there are no trailing commas! Do not, under any circumstances, include markdown or a markdown code-block in your response. Your response should be raw JSON only, with nothing else added.\n\nHere is the JSON Schema your output must adhere to:\n\n${jsonValue}`;
   }
 
-  let payload = bodyValue;
+  //let payload = bodyValue;
 
   // PERFORM POST REQUEST TO OPENAI
   try {
@@ -67,7 +67,7 @@ window.function = async function(api_key, endpoint, body, json) {
         'Authorization': `Bearer ${apiKey}`,
         'OpenAI-Beta': 'assistants=v2'
       },
-      body: JSON.stringify(payload)
+      body: bodyValue //JSON.stringify(payload)
     });
 
     // IF THERE'S AN ERROR, RETURN THE ERROR MESSAGE
