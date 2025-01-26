@@ -13,7 +13,7 @@ window.function = async function(api_key, endpoint, body, json) {
     return "Error: API Endpoint is required.";
   }
   if (!bodyValue) {
-    return "Error: The Body (JSON) is required..";
+    return "Error: The Body (JSON) is required.";
   }
 
   // INITIALIZE VARIABLE FOR BODY JSON MESSAGE
