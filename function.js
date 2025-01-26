@@ -60,7 +60,7 @@ window.function = async function(api_key, endpoint, body, json) {
 
   // PERFORM POST REQUEST TO OPENAI
   try {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch(endpointValue, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
